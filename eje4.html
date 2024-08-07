@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Grilla y Estilos Avanzados</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 3fr 1fr;
+            height: 100vh;
+        }
+
+        header {
+            grid-column: 1 / 4;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            grid-column: 1 / 2;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        .contenido {
+            grid-column: 2 / 3;
+            padding: 15px;
+            background-color: #e2e2e2;
+        }
+
+        .sidebar {
+            grid-column: 3 / 4;
+            background-color: #d4d4d4;
+            padding: 15px;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                grid-template-rows: auto auto 1fr auto auto;
+                grid-template-columns: 1fr;
+            }
+
+            header, footer {
+                grid-column: 1 / 2;
+            }
+
+            nav, .contenido, .sidebar {
+                grid-column: 1 / 2;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encabezado</h1>
+    </header>
+
+    <nav>
+        <h2>Navegación</h2>
+        <p>Enlace 1</p>
+        <p>Enlace 2</p>
+        <p>Enlace 3</p>
+    </nav>
+
+    <div class="contenido">
+        <h2>Contenido Principal</h2>
+        <p>Este es el área de contenido principal de la página.</p>
+    </div>
+
+    <aside class="sidebar">
+        <h2>Barra Lateral</h2>
+        <p>Contenido adicional o anuncios.</p>
+    </aside>
+
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+</body>
+</html>

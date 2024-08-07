@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Posicionamiento y Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            position:absolute;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px ;
+        }
+
+        header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+            
+        }
+
+        .contenedor {
+            display: flex;
+            margin-top: 60px; /* Espacio para el header fijo */
+            margin-bottom: 40px; /* Espacio para el footer fijo */
+        }
+
+        .navegacion {
+            width: 25%;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        .contenido {
+            width: 75%;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Encabezado Fijo</h1>
+    </header>
+
+    <div class="contenedor">
+        <div class="navegacion">
+            <h2>Navegación</h2>
+            <p>Enlace 1</p>
+            <p>Enlace 2</p>
+            <p>Enlace 3</p>
+        </div>
+        
+        <div class="contenido">
+            <h2>Contenido</h2>
+            <p>Este es el contenido principal de la página.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pie de página Fijo</p>
+    </footer>
+</body>
+</html>
